@@ -36,6 +36,7 @@ cells.forEach(cell => {
         setTimeout(() => {
           if (checkWinner()) {
               isActive = false;
+              console.info("Check winner")
               statusDisplay.textContent = currentPlayer === "O" ?  "Te nyertél!":"A Bot nyert!" ;
               statusDisplay.style.color = currentPlayer === "O" ?  "rgb(80,77,255)" :"red" ;
               alert(currentPlayer === "O" ? "Nyertél!" : "Vesztettél!"  );
@@ -46,10 +47,7 @@ cells.forEach(cell => {
             if (currentPlayer === "O") {
               botm()
             }
-            // currentPlayer = currentPlayer === "O" ? "X" : "O";
-            // statusDisplay.textContent = currentPlayer === "O" ? "Te jössz!" : "A Bot lép!";
-            // statusDisplay.style.color = currentPlayer === "O" ? "rgb(80,77,255)" : "red";
-          
+            
           if (isGameOver()) {
             statusDisplay.textContent = "Döntetlen!";
             statusDisplay.style.color = "whitesmoke"; 
